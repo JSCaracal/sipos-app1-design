@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar fx:id="mainMenuItems" prefHeight="26.0" prefWidth="147.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu fx:id="toolbarMenu" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="tbQuit" mnemonicParsing="false" onAction="#tbQuitProgam" text="Quit" />
+               </items>
+            </Menu>
+            <Menu fx:id="toolbarEdit" mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem fx:id="editRemove" mnemonicParsing="false" onAction="#removeFromList" text="Remove an Item" />
+                  <MenuItem fx:id="tbAddItem" mnemonicParsing="false" onAction="#addItemList" text="Add An Item" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Show">
+               <items>
+                  <MenuItem fx:id="tbShowComplete" mnemonicParsing="false" onAction="#showCompleteLists" text="Complete" />
+                  <MenuItem fx:id="tbShowIncomplete" mnemonicParsing="false" onAction="#showIncompleteLists" text="Incomplete" />
+                  <MenuItem fx:id="tbShowAll" mnemonicParsing="false" onAction="#showAllLists" text="All" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ListView fx:id="mainItemView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TodoListController">
+   <children>
+      <Button fx:id="NewlistButton" layoutX="41.0" layoutY="272.0" mnemonicParsing="false" onAction="#initNewList" prefHeight="94.0" prefWidth="151.0" text="New" />
+      <Button fx:id="LoadButton" layoutX="225.0" layoutY="272.0" mnemonicParsing="false" onAction="#loadBttn" prefHeight="94.0" prefWidth="151.0" text="Load" />
+      <Button fx:id="quitButton" layoutX="400.0" layoutY="272.0" mnemonicParsing="false" onAction="#exitProgram" prefHeight="94.0" prefWidth="151.0" text="Quit" />
+      <Label layoutX="68.0" layoutY="35.0" prefHeight="103.0" prefWidth="466.0" text="Todo List Program">
+         <font>
+            <Font size="56.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
