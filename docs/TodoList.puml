@@ -1,11 +1,24 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-autonumber
+class TodoList{
+ -String description
+ -String title
+ -int id
+ -ArrayList<TodoListItem> items
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+ void Additem(String desc, String dueDate);
+ void removeItem(int id)
+ void editDueDate(int id)
+ void editDescription(int id)
+ void markComplete(int id)
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+}
+class TodoListItem{
+-String description
+-String dueDate
+-boolean isComplete
+}
+
+TodoList *-- TodoListItem
 @enduml
