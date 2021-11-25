@@ -2,16 +2,19 @@
 'https://plantuml.com/sequence-diagram
 
 class TodoList{
- -String description
- -String title
- -int id
  -ArrayList<TodoListItem> items
+ -Map<String,TodoListItem>itemMap
 
- void Additem(String desc, String dueDate);
- void removeItem(int id)
- void editDueDate(int id)
- void editDescription(int id)
- void markComplete(int id)
+ +void Additem(TodoListItem item);
+ +void removeItem(TodoListItem item)
+ +void editDueDate(String itemName, String newDate)
+ +void EditDescription(String itemName, String description)
+ +void MarkAsDone(String itemName)
+ +void MarkAsIncomplete(String itemName)
+ +void ClearList()
+ +void writeFile(File file)
+ +void saveFile(File file)
+
 
 }
 class TodoListItem{
